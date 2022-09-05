@@ -8,6 +8,8 @@
 
 ## 스터디 내용  
 
+*DKU System Software Lab의 홈페이지에서 스터디 내용들을 [전자책](https://sslab.dankook.ac.kr/leveldb-wiki/)으로도 편하게 읽어볼 수 있음.*  
+
 ### Analysis (at source code level)  
 LevelDB에서 storage(disk)단에서 key-value pair들을 저장하는데 쓰이는 자료구조인 `SSTable`에 대해 소스 코드 수준에서 분석함.  
 - [SSTable format](https://github.com/DKU-StarLab/leveldb-wiki/blob/main/analysis/sstable.md)
