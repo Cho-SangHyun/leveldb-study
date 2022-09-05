@@ -1,3 +1,42 @@
+# LevelDB Study  
+*2022년 하계 방학 중 진행한 스터디*  
+*Google에서 만든 Key-value store인 LevelDB를 소스코드 수준에서 분석하고,*    
+*여러 가지 option들을 수정하며 성능 분석 및 튜닝을 진행하고 관련 문서들을 작성함*  
+
+## 스터디 기간  
+2022.07.05 ~ 2022.09.11  
+
+## 스터디 내용  
+
+### Analysis (at source code level)  
+LevelDB에서 storage(disk)단에서 key-value pair들을 저장하는데 쓰이는 자료구조인 `SSTable`에 대해 소스 코드 수준에서 분석함.  
+- [SSTable format](https://github.com/DKU-StarLab/leveldb-wiki/blob/main/analysis/sstable.md)
+- [SSTable read](https://github.com/DKU-StarLab/leveldb-wiki/blob/main/analysis/sstable-read.md)
+- [SSTable write](https://github.com/DKU-StarLab/leveldb-wiki/blob/main/analysis/sstable-write.md)  
+
+### Benchmark  
+여러 가지 option들을 주면서 각각의 상황에서 성능을 측정하고 그렇게 나온 이유에 대해 논의함.  
+- [LevelDB benchmark 성능 분석 과제](https://github.com/DKU-StarLab/leveldb-study/tree/main/homework)  
+
+이 외에도 Bloom Filter를 사용했을 때와 안 했을 때의 읽기 성능 차이 등을 측정함.  
+
+`SSTable`과 관련하여, Bloom Filter를 쓰지 않으면 Filter Block을 쓰지 않으므로 쓰기 성능이 높아질 것이라 예측하고 이에 관한 성능 측정 및 분석도 진행함.
+- [SSTable과 Bloom Filter 관련 쓰기 성능 분석](https://github.com/DKU-StarLab/leveldb-wiki/blob/main/benchmarks/sstable.md)  
+  - [관련 발표자료](https://github.com/DKU-StarLab/leveldb-study/blob/main/benchmarks/2022.7.26_SSTable_week4.pdf)
+
+### Tuning  
+여러 option값들을 최적의 값으로 튜닝하고, 각 workload 수행의 평균 throughput이 가장 높게 측정되는 팀을 가려내는 대회를 진행.  
+`YSCB Workload`에 대해 진행했고 1등으로 마무리함.  
+
+- [Tuning contest result](https://github.com/DKU-StarLab/leveldb-study/blob/main/tuning/README.md)
+- [Tuning contest report](https://github.com/DKU-StarLab/leveldb-study/blob/main/tuning/%5BTuning%5Dteam_SSTable_report.md)
+
+<br/>  
+
+---------------------  
+
+이하 원본 레포지토리 내용 전문
+
 # LevelDB Study
 2022 [DKU System Software Lab](https://sslab.dankook.ac.kr/) LevelDB Study
 
