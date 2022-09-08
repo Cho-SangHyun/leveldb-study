@@ -15,6 +15,8 @@ LevelDB에서 storage(disk)단에서 key-value pair들을 저장하는데 쓰이
 - [SSTable format](https://github.com/DKU-StarLab/leveldb-wiki/blob/main/analysis/sstable.md)
 - [SSTable read](https://github.com/DKU-StarLab/leveldb-wiki/blob/main/analysis/sstable-read.md)
 - [SSTable write](https://github.com/DKU-StarLab/leveldb-wiki/blob/main/analysis/sstable-write.md)  
+- SSTable read 관련 분석 녹화본  
+[![Video Label](http://img.youtube.com/vi/_D_YSKXDeRE/0.jpg)](https://www.youtube.com/watch?v=_D_YSKXDeRE)
 
 ### Benchmark  
 여러 가지 option들을 주면서 각각의 상황에서 성능을 측정하고 그렇게 나온 이유에 대해 논의함.  
