@@ -12,9 +12,9 @@
 
 ### Analysis (at source code level)  
 LevelDB에서 storage(disk)단에서 key-value pair들을 저장하는데 쓰이는 자료구조인 `SSTable`에 대해 소스 코드 수준에서 분석함.  
-- [SSTable format](https://github.com/DKU-StarLab/leveldb-wiki/blob/main/analysis/sstable.md)
-- [SSTable read](https://github.com/DKU-StarLab/leveldb-wiki/blob/main/analysis/sstable-read.md)
-- [SSTable write](https://github.com/DKU-StarLab/leveldb-wiki/blob/main/analysis/sstable-write.md)  
+- [SSTable format](https://github.com/DKU-StarLab/leveldb-wiki/blob/main/analysis/sstable/sstable.md)
+- [SSTable read](https://github.com/DKU-StarLab/leveldb-wiki/blob/main/analysis/sstable/sstable-read.md)
+- [SSTable write](https://github.com/DKU-StarLab/leveldb-wiki/blob/main/analysis/sstable/sstable-write.md)  
 - SSTable read 관련 분석 녹화본  
 [![Video Label](http://img.youtube.com/vi/_D_YSKXDeRE/0.jpg)](https://www.youtube.com/watch?v=_D_YSKXDeRE)
 
